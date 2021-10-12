@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="signup">SIGNUP</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_phone">Enter Phone</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="submit">Submit</string>
+    <string name="something_went_wrong">Something Went Wrong</string>
+    <string name="success">Successfully Added</string>
+    <string name="delete">Delete</string>
+    <string name="back_to_home">Back to Home</string>
+    <string name="full_name">Full Name</string>
+    <string name="mobile_no">Mobile No</string>
+    <string name="email">Email</string>
+    <string name="update">Update</string>
+    <string name="view_records">View Records</string>
+    <string name="set_alert">Set Alert</string>
+    <string name="notification">Notification</string>
+
+
+</resources>
