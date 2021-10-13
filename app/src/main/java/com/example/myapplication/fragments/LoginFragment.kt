@@ -1,36 +1,28 @@
 package com.example.myapplication.fragments
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.myapplication.R
-import com.example.myapplication.databinding.FragmentLoginBinding
 import com.example.myapplication.model.User
 import com.example.myapplication.model.UserLoginInfo
+import kotlinx.android.synthetic.main.fragment_login.*
 
 
-class LoginFragment: Fragment() {
-    private lateinit var binding: FragmentLoginBinding
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-            FragmentLoginBinding.inflate(inflater, container, false).also {
-                binding = it
-            }.root
+class LoginFragment : Fragment(R.layout.fragment_login) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        binding.btnLogin.setOnClickListener {
-            val username = binding.etUsername.text.toString()
-            val password = binding.etPassword.text.toString()
+        btn_login.setOnClickListener {
+            val username = et_username.text.toString()
+            val password = et_password.text.toString()
 
             UserLoginInfo.user = User(username)
-            val action = LoginFragment.actionLoginFragmentToProfileFragment()
+            val action = LoginFragmentDirections.actionLoginFragment2ToProfileFragment()
             findNavController().navigate(action)
         }
-
     }
-
 }
