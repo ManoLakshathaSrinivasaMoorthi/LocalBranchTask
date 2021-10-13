@@ -8,15 +8,19 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.myapplication.fragments.MainFragment"
-        android:label="MainFragment" >
+        android:label="MainFragment">
         <action
             android:id="@+id/action_mainFragment_to_loginFragment2"
             app:destination="@id/loginFragment2" />
+
     </fragment>
     <fragment
         android:id="@+id/loginFragment2"
         android:name="com.example.myapplication.fragments.LoginFragment"
         android:label="LoginFragment" >
+        <!--<argument
+            android:name="receivername"
+            app:argType="string"/>-->
         <action
             android:id="@+id/action_loginFragment2_to_profileFragment"
             app:destination="@id/profileFragment" />
@@ -27,5 +31,10 @@
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.myapplication.fragments.ProfileFragment"
-        android:label="ProfileFragment" />
+        android:label="ProfileFragment">
+       <!-- <deepLink
+            android:id="@+id/deepLink2"
+            app:uri="com.example.myapplication/{receivername}" />-->
+    </fragment>
+
 </navigation>

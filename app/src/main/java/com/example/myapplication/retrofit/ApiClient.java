@@ -13,6 +13,6 @@ public interface  ApiClient {
 
     /*@GET("api/v1/civilizations")
     Call<List<Games>> createUser();*/
-    @GET("video-api/v3/")
+    @GET("video-api/v3/page=2")
     Call<List<GameModel>> createUser();
 }

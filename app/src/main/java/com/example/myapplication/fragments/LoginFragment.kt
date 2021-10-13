@@ -3,7 +3,6 @@ package com.example.myapplication.fragments
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.R
 import com.example.myapplication.model.User
@@ -21,6 +20,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             val password = et_password.text.toString()
 
             UserLoginInfo.user = User(username)
+            //Calling Cond Navigation from Login to Profile
             val action = LoginFragmentDirections.actionLoginFragment2ToProfileFragment()
             findNavController().navigate(action)
         }

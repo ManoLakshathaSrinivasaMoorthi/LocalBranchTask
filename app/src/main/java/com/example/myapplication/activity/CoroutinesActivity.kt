@@ -16,9 +16,10 @@ class CoroutinesActivity : AppCompatActivity() {
         viewModel=ViewModelProvider(this).get(FoodViewModel::class.java)
 
         viewModel?.registerProvider()?.observe(this,{
+          //Getting response from api
             val response=it.body()
-            Log.d("Output:",Gson().toJson(response))
-          val textview=  response?.getErrorId()
+            Log.d("Output:",Gson().toJson(response)) // print with log
+         // val textview=  response?.getErrorId()
         })
     }
 }
