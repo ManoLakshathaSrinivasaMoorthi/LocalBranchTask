@@ -23,6 +23,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity android:name=".activity.Realm_Db"></activity>
         <activity android:name=".activity.ConditionalNavigation" />
         <activity android:name=".activity.CoroutinesActivity" />
         <activity android:name=".activity.WorkManagerActivity" />
