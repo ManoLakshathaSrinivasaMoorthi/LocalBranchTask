@@ -1,6 +1,7 @@
 package com.example.myapplication.activity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -36,6 +37,9 @@ public class EncryptionActivity extends AppCompatActivity {
             public void onResponse(@NonNull Call<List<GameModel>> call, @NonNull Response<List<GameModel>> response) {
                // Example user1 = response.body();
                 response.body();
+                long tx = response.raw().receivedResponseAtMillis();
+                long rx = response.raw().sentRequestAtMillis();
+                Log.d("response time : ",(rx - tx)+" ms");
                //   responseText.setText(response.body().toString());
                 // Toast.makeText(getApplicationContext(), user1.name + " " + user1.job + " " + user1.id + " " + user1.createdAt, Toast.LENGTH_SHORT).show();
 

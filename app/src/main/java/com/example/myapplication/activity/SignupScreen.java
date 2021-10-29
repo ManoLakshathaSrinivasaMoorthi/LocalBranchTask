@@ -69,7 +69,7 @@ public class SignupScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 binding.constraintlayout.transitionToStart();
-                startActivity(new Intent(SignupScreen.this, MainActivity.class));
+                startActivity(new Intent(SignupScreen.this, GoogleApiActivity.class));
 
             }
         });

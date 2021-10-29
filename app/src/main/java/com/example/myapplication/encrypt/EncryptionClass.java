@@ -35,7 +35,7 @@ public class EncryptionClass implements Interceptor {
         MediaType mediaType = MediaType.parse("text/plain; charset=utf-8");
         if (mEncryptionStrategy != null) {
             try {
-                assert rawBody != null;
+//                assert rawBody != null;
                 String rawBodyStr = requestBodyToString(rawBody);
                 encryptedBody = mEncryptionStrategy.encrypt(rawBodyStr);
                 Log.i(TAG,"Raw body"+rawBodyStr);

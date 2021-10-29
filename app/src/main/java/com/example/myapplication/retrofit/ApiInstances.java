@@ -23,8 +23,8 @@ public class ApiInstances {
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder()
                 .addInterceptor(interceptor)
-               .addInterceptor(encryptionInterceptor)
-                .addInterceptor(decryptionInterceptor)
+              // .addInterceptor(encryptionInterceptor)
+              //  .addInterceptor(decryptionInterceptor)
                 .build();
 
 

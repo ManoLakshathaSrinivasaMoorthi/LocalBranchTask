@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Data/LocalBranchTask/app/src/main/res/layout/activity_google_api.xml" value="0.19" />
+        <entry key="..\:/Data/LocalBranchTask/app/src/main/res/layout/activity_volley_apiresponse.xml" value="0.1921875" />
+      </map>
+    </option>
+  </component>
   <component name="NullableNotNullManager">
     <option name="myDefaultNullable" value="org.jetbrains.annotations.Nullable" />
     <option name="myDefaultNotNull" value="androidx.annotation.NonNull" />

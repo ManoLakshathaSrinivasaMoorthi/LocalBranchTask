@@ -18,6 +18,14 @@
     <string name="set_alert">Set Alert</string>
     <string name="notification">Notification</string>
     <string name="welcome">Welcome</string>
+    <string name="disconnect">Disconnect</string>
+    <!-- Button labels -->
+    <string name="sign_out">Sign Out</string>
+    <string name="title_text">Google Sign-In\nQuickstart</string>
+    <string name="refresh_token">Get Fresh Token</string>
 
+    <!-- Content Description for images -->
+    <string name="desc_google_icon">Google Logo</string>
+    <string name="signed_in_fmt">Signed in as: %s</string>
 
 </resources>

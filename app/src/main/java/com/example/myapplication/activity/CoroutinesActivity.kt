@@ -18,6 +18,7 @@ class CoroutinesActivity : AppCompatActivity() {
         viewModel?.registerProvider()?.observe(this,{
           //Getting response from api
             val response=it.body()
+
             Log.d("Output:",Gson().toJson(response)) // print with log
          // val textview=  response?.getErrorId()
         })
