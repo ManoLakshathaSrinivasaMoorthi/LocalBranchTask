@@ -19,6 +19,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
@@ -48,20 +49,20 @@ class LoginActivity : AppCompatActivity() {
         val emailErrorState = remember { mutableStateOf(false) }
         val passwordErrorState = remember { mutableStateOf(false) }
         val password = remember { mutableStateOf(TextFieldValue()) }
-       ConstraintLayout{
 
-       }
-        Column(modifier = Modifier
-            .fillMaxSize()
-            .padding(5.dp),
-           horizontalAlignment = Alignment.Start) {
-            Image(painter = painterResource(id = R.drawable.ic_logo),
-                contentDescription = "Login Image")
-            Text(text = buildAnnotatedString {
-                withStyle(style = SpanStyle(color = Color.Black)) {
-                    append("Welcome to Omnicure Now")
-                }
-            }, fontSize = 10.sp)
+        Row(verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(10.dp,50.dp,2.dp,4.dp)
+        ) {
+            Image(
+                painterResource(id = R.drawable.ic_logo),
+                contentDescription = "Login Image", modifier = Modifier.requiredSize(50.dp, 60.dp)
+            )
+            Spacer(modifier = Modifier.requiredSize(10.dp))
+            Text(
+                text = "Welcome to Omnicure Now,",
+                fontWeight = FontWeight.Bold,
+                fontSize = 30.sp
+            )
         }
         Spacer(Modifier.size(20.dp))
 
@@ -111,11 +112,7 @@ class LoginActivity : AppCompatActivity() {
                     IconButton(onClick = {
                         passwordVisibility.value = !passwordVisibility.value
                     }) {
-                         Icon(
-                       //  imageVector = if (passwordVisibility.value) Icons.Default.VisibilityOff else Icons.Default.Visibility,
-                          contentDescription = "visibility",
-                          tint = Color.Red
-                         )
+
                     }
                 },
                 visualTransformation = if (passwordVisibility.value) PasswordVisualTransformation() else VisualTransformation.None
@@ -153,7 +150,7 @@ class LoginActivity : AppCompatActivity() {
                 TextButton(onClick = {
 
                 }) {
-                    Text(text = "Register ?", color = Color.Red)
+                    Text(text = "Register ?", color = Color.Black)
                 }
             }
         }
@@ -161,11 +158,5 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    private fun Icon(contentDescription: String, tint: Color) {
 
-    }
-
-    private fun ConstraintLayout(function: () -> Unit) {
-
-    }
 }

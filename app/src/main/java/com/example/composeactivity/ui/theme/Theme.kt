@@ -1,5 +1,6 @@
 package com.example.composeactivity.ui.theme
 
+import android.widget.Toolbar
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.MaterialTheme.shapes
@@ -29,6 +30,12 @@ private val LightColorPalette = lightColors(
     */
 )
 
+private val ToolbarColor = darkColors(
+    primary = bg_blue,
+    primaryVariant = LightGrey,
+    secondary = Teal200
+)
+
 @Composable
 fun ComposeActivityTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -52,7 +59,7 @@ fun ComposeActivityTheme(
   @Composable
   fun LoginScreenTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
       val colors = if (darkTheme) {
-          DarkColorPalette
+          ToolbarColor
       } else {
           LightColorPalette
       }

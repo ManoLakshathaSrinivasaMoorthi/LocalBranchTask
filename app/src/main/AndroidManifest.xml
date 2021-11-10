@@ -10,10 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeActivity">
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.TransferPatient"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ActivityCensusConsultChart"
             android:exported="false" />
         <activity
             android:name=".activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ActivityLocalCareProviderSignUpFirst"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SignupActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeActivity.NoActionBar">
