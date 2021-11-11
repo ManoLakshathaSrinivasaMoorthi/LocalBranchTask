@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.sp
 import com.example.composeactivity.R
 import com.example.composeactivity.ui.theme.LoginScreenTheme
 import com.example.composeactivity.ui.theme.bg_blue
+import com.example.composeactivity.ui.theme.color_ash
 
 class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +28,13 @@ class SignupActivity : AppCompatActivity() {
         setContent {
             // Set Theme for Screen
             LoginScreenTheme {
-                AppScreen()
+                Box(
+                    Modifier
+                        .background(color = color_ash)
+                        .fillMaxSize()) {
+                    AppScreen()
+                }
+
             }
         }
     }
@@ -35,7 +42,7 @@ class SignupActivity : AppCompatActivity() {
     @Composable
 
     private fun AppScreen() {
-        Column(modifier = Modifier.padding(25.dp)) {
+        Column(modifier = Modifier.padding(20.dp)) {
             TitleFields()
             Spacer(modifier = Modifier.height(1.dp))
             HeaderText()
@@ -96,22 +103,29 @@ class SignupActivity : AppCompatActivity() {
     }
    @Composable
     private fun LcpProvider() {
-        Box(
-            Modifier
+        Box(Modifier
                 .background(color = Color.White)
                 .border(width = 4.dp, color = bg_blue)){
-            Column(Modifier.padding(10.dp)) {
-                Text(
-                    text = "Local Care Provider,",
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 16.sp
+            Row(Modifier.padding(3.dp,2.dp,5.dp,2.dp),horizontalArrangement = Arrangement.Start) {
+               Column(Modifier.padding(1.dp)) {
+                   Text(
+                       text = "Local Care Provider,",
+                       fontWeight = FontWeight.Bold,
+                       fontSize = 16.sp
+                   )
+                   Spacer(modifier = Modifier.requiredSize(2.dp))
+                   Text(
+                       text = "I am a healthcare professional \n taking care of patients onsite",
+                       fontSize = 14.sp
+                   )
+               }
+                Image(
+                    painterResource(id = R.drawable.ic_logo),
+                    contentDescription = "Login Image", modifier = Modifier.requiredSize(50.dp, 60.dp)
                 )
-                Spacer(modifier = Modifier.requiredSize(2.dp))
-                Text(
-                    text = "I am a healthcare professional taking care of patients onsite",
-                    fontSize = 14.sp
-                )
+
             }
+
         }
        Spacer(modifier = Modifier.requiredSize(25.dp))
        Row(modifier=Modifier.padding(30.dp),verticalAlignment = Alignment.CenterVertically) {
